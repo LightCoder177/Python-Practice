@@ -1,24 +1,16 @@
-#Changing the meaning of words in a list. 
+#Creating a shoter version of checking the vowel program. 
 
-#variable and list. 
+#set. 
 
-phrase = "Don't panic!"
-plist = list(phrase)
+vowels = {'a', 'e', 'i', 'o', 'u'}
 
-#Removing unwanted words. 
+word = input("Please type your sentence here: ")
 
-plist.remove('D')
-plist.remove("'")
+#execution
 
-for repeat in range(0, 4):
-    plist.pop()
+found = vowels.intersection(set(word))
 
-#Making the changes.
+print("Here are the vowels found in your sentence.")
 
-plist.extend([plist.pop(), plist.pop()])
-plist.insert(2, plist.pop(3))
-plist.append(".")
-new_phrase = ''.join(plist)
-
-print(phrase)
-print(new_phrase)
+for vowel in sorted(found):
+    print(vowel)
