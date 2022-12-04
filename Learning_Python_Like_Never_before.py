@@ -1,16 +1,16 @@
-#Creating a shoter version of checking the vowel program. 
+#A shorter version of vowel checking program. 
 
-#set. 
+#set
 
-vowels = {'a', 'e', 'i', 'o', 'u'}
+vowels = {'a', 'e', 'i', 'o', 'u', 'A', 'E', 'I', 'O', 'U'}
 
 word = input("Please type your sentence here: ")
 
-#execution
+#Execution
 
 found = vowels.intersection(set(word))
 
-print("Here are the vowels found in your sentence.")
+print("Here are the vowels in your sentence.")
 
 for vowel in sorted(found):
     print(vowel)
