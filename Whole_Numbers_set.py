@@ -1,5 +1,7 @@
 #Getting whole number set from even and odd numbers.
 
+#set
+
 odd = set(range(1, 10, 2))
 even = set(range(0, 10, 2))
 
