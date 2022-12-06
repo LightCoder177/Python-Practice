@@ -1,18 +1,15 @@
 #Saying hello to the user using his name. 
 
+#variable
+
+First_Name = input("Please type your first name here: ")
+
 #set
 
-First_Name = set()
-Second_Name = set()
+Full_Name = {First_Name}
 
-#Execution for the first name
+Second_Name = input("Please type your second name here: ")
+Second_Name_set = {Second_Name}
 
-first_name = "Ahmad"
-second_name = "Mujtaba"
-
-First_Name.add(first_name)
-First_Name.add(second_name)
-
-Name = list(sorted(First_Name))
-
-print(''.join(Name[0]) + " " + ''.join(Name[1]))
+if Second_Name_set in Full_Name[0]:
+    print("The first name and the last name cannot be the same.") 
