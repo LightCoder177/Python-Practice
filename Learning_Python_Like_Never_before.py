@@ -1,16 +1,32 @@
-#A short version of vowel checking program using set. 
+#Dict within dict(Also know as complex data structure.)
 
-#set
+#importing pprint module. 
 
-vowels = {'a', 'e', 'i',' o', 'u', 'A', 'E', 'I', 'O', 'U'}
+import pprint
 
-word = input("Please type your sentence here: ")
+#dict
 
-found = vowels.intersection(set(word))
+people = {'Ford': {'Name': "Ford Prefect",
+                   'Gender': "Male",
+                   'Occupation': "Researcher",
+                   'Home Planet': "Betelgeuse Home"},
+
+          'Arthur': {'Name': "Arthur Dent", 
+                     'Gender': "Male", 
+                     'Occupation': "Sandwich-Maker",
+                     'Home Planet': "Earth"},
+          
+          'Trillian': {'Name': "Tricia McMillan",
+                       'Gender': 'Female',
+                       'Occupation': 'Mathematician',
+                       'Home Planet': 'Earth'},
+
+            'Robot': {'Name': "Marvin",
+                      'Gender': "Unknown",
+                      'Occupation': "Paranoid Android",
+                      'Home Planet': "Unknown"}
+}
 
 #Execution
 
-print("Here are the vowels in the sentence that you provided.")
-
-for vowel in sorted(found):
-    print(vowel)
+pprint.pprint(people)
