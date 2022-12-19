@@ -1,11 +1,9 @@
-#Creating a function
+#Vowel checking function
 
-#Vowel check function
+#function
 
-def Vowel_Check(word):
-    """Check for vowels in a provided requested sentence."""
-    vowels = set('aeiou')
+def vowel_check(word: str) -> set:
+    """Return as true or false if found a vowel in the provided phrase."""
+    vowels = set("AEIOUaeiou")
     found = vowels.intersection(set(word))
-    print('Here are the vowels in your sentence:')
-    for vowel in sorted(found):
-        print(vowel)
+    return bool(found)
