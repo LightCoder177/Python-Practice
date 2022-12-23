@@ -1,0 +1,5 @@
+Please follow these codes to create a distribution file and install any modules in your site packaging. 
+
+1. create two necessary files with your module file one.(setup.py and readme.txt)
+2. use the command to create a source distribution file(python setup.py sdist)
+3. use the pip command to install the module zip/tar file into your site package(python -m pip install nameOfThezipfile.zip )
