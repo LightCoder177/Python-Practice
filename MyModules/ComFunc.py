@@ -6,6 +6,11 @@
 import re
 from datetime import datetime
 
+# Lists, tuple, sets, and dictionary or maps.
+
+odd = list(range(1, 10000, 2))
+even = list(range(0, 10000, 2))
+
 # Functions
 
 
@@ -53,3 +58,27 @@ def ValidateDate(date_string: str) -> bool:
         return True
     except ValueError:
         return False
+
+
+def OverlapDates(Day: int = None, Month: int = None, Year: int = None) -> bool:
+    """Check for day, month, or year argu if
+    any of them are overlapping or existing
+    in two different even or odd list and not
+    in the same one."""
+
+    if (
+        (
+            Day in even or
+            Month in even or
+            Year in even
+        )
+        and
+        (
+            Day in odd or
+            Month in odd or
+            Year in odd
+        )
+    ):
+        return True
+    else:
+        False
